@@ -1,0 +1,20 @@
+---
+# This playbook will ensure that all requirements are met for the installation
+# of the FreeIPA Server components
+
+- name: Ensure that all FreeIPA Server components are installed on ipaServers
+  hosts: ipaServers
+  become: yes
+  tasks:
+
+    - name: Ensure that all packages are the latest version
+      ansible.builtin.dnf:
+        name: "*"
+        state: latest
+
+    - name: Ensure that the FreeIPA Server (w/ DNS) is installed
+      ansible.builtin.dnf:
+        name:
+          - freeipa-server
+          - freeipa-server-dns
+        state: latest

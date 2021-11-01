@@ -1,0 +1,13 @@
+---
+# This playbook will ensure that all fedora34 machines are up to date and ready
+# for provisioning
+
+- name: Ensure that all Fedora 34 components are up to date
+  hosts: fedora34
+  become: yes
+  tasks:
+
+    - name: Ensure that all packages are the latest version
+      ansible.builtin.dnf:
+        name: "*"
+        state: latest

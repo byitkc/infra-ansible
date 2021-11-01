@@ -1,0 +1,17 @@
+home_byitkc_net:
+  children:
+    fedora34:
+      hosts:
+        10.1.10.11:
+        10.1.10.12:
+        10.1.10.21:
+    ansibleServers:
+      hosts:
+        10.1.10.21:
+    ipaServers:
+      hosts:
+        10.1.10.11:
+        10.1.10.12:
+  vars:
+    ansible_ssh_private_key_file: "~/.ssh/deployer"
+    ansible_python_interpreter: "/usr/bin/python3"
