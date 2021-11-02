@@ -2,7 +2,7 @@
 # This playbook will ensure that all ipaClients are ready for joining IPA
 
 - name: Ensure that all Fedora 34 systems are ready for IPA Join
-  hosts: fedora34
+  hosts: ipaClients
   become: yes
   tasks:
 
