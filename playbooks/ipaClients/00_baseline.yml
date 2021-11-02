@@ -1,0 +1,12 @@
+---
+# This playbook will ensure that all ipaClients are ready for joining IPA
+
+- name: Ensure that all Fedora 34 systems are ready for IPA Join
+  hosts: fedora34
+  become: yes
+  tasks:
+
+    - name: Ensure that the FreeIPA Client is installed
+      ansible.builtin.dnf:
+        name: "freeipa-client"
+        state: latest
