@@ -9,6 +9,11 @@ home_byitkc_net:
         psql01.home.byitkc.net:
         redis01.home.byitkc.net:
         netbox01.home.byitkc.net:
+    ipaClients:
+      ansible01.home.byitkc.net:
+      psql01.home.byitkc.net:
+      redis01.home.byitkc.net:
+      netbox01.home.byitkc.net:
     ansibleServers:
       hosts:
         ansible01.home.byitkc.net:
