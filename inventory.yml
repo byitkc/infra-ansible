@@ -2,16 +2,29 @@ home_byitkc_net:
   children:
     fedora34:
       hosts:
-        10.1.10.11:
-        10.1.10.12:
-        10.1.10.21:
+        ipa01.home.byitkc.net:
+        ipa02.home.byitkc.net:
+        ansible01.home.byitkc.net:
+        omega.home.byitkc.net:
+        psql01.home.byitkc.net:
+        redis01.home.byitkc.net:
+        netbox01.home.byitkc.net:
     ansibleServers:
       hosts:
-        10.1.10.21:
+        ansible01.home.byitkc.net:
     ipaServers:
       hosts:
-        10.1.10.11:
-        10.1.10.12:
+        ipa01.home.byitkc.net:
+        ipa02.home.byitkc.net:
+    psqlServers:
+      hosts:
+        psql01.home.byitkc.net:
+    redisServers:
+      hosts:
+        redis01.home.byitkc.net:
+    netboxServers:
+      hosts:
+        netbox01.home.byitkc.net:
   vars:
     ansible_ssh_private_key_file: "~/.ssh/deployer"
     ansible_python_interpreter: "/usr/bin/python3"
